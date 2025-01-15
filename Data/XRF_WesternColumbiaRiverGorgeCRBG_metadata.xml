@@ -1,0 +1,934 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Ian P. Yuh</origin>
+        <origin>Russell C. Evarts</origin>
+        <origin>Richard M. Conrey</origin>
+        <pubdate>20220906</pubdate>
+        <title>X-ray Fluorescence Geochemistry of Columbia River Basalt Group Rocks in the Western Columbia River Gorge</title>
+        <geoform>tabular digital data</geoform>
+        <pubinfo>
+          <pubplace>Reston, VA</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <onlink>https://doi.org/10.5066/P9Z2XK4E</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This table contains geochemical data collected for whole-rock samples from the Columbia River Basalt Group in the western Columbia River Gorge in Oregon and Washington. Most samples were collected by Russell C. Evarts and Richard M. Conrey from 2002 to 2014. Samples were collected during traverses along roads, streams, ridgecrests, and other areas as part of ongoing geologic mapping. Additional samples were provided by Marvin H. Beeson. Major- and trace-element analyses were performed by X-ray fluorescence at the Peter Hooper GeoAnalytical Laboratory at Washington State University in Pullman, Washington. No normalization has been applied to these data.</abstract>
+      <purpose>Data were obtained in support of studies of the Columbia River Basalt Group stratigraphy in the western Columbia River Gorge.</purpose>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>2002</begdate>
+          <enddate>2014</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>ground condition</current>
+    </timeperd>
+    <status>
+      <progress>Complete</progress>
+      <update>None planned</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-122.295136</westbc>
+        <eastbc>-121.875144</eastbc>
+        <northbc>45.723826</northbc>
+        <southbc>45.500206</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>geoscientificInformation</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Thesaurus</themekt>
+        <themekey>petrology</themekey>
+        <themekey>geochemistry</themekey>
+        <themekey>chemical analysis</themekey>
+        <themekey>x-ray fluorescence</themekey>
+        <themekey>scientific interpretation</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:62bb97e6d34e88efc5245d61</themekey>
+      </theme>
+      <place>
+        <placekt>Geographic Names Information System</placekt>
+        <placekey>Oregon</placekey>
+        <placekey>Washington</placekey>
+        <placekey>Columbia River Gorge</placekey>
+      </place>
+      <place>
+        <placekt>Common geographic areas</placekt>
+        <placekey>Oregon</placekey>
+        <placekey>Washington</placekey>
+        <placekey>Multnomah</placekey>
+        <placekey>Hood River</placekey>
+        <placekey>Clark</placekey>
+        <placekey>Skamania</placekey>
+        <placekey>Lower Columbia-Sandy</placekey>
+        <placekey>Middle Columbia-Hood</placekey>
+        <placekey>Camas</placekey>
+        <placekey>Washougal</placekey>
+        <placekey>Bridal Veil</placekey>
+        <placekey>Multnomah Falls</placekey>
+        <placekey>Bonneville Dam</placekey>
+        <placekey>Beacon Rock</placekey>
+      </place>
+      <place>
+        <placekt>None</placekt>
+        <placekey>Pacific Northwest</placekey>
+        <placekey>Columbia River Gorge National Scenic Area</placekey>
+      </place>
+      <stratum>
+        <stratkt>Geolex</stratkt>
+        <stratkey>Columbia River Basalt Group</stratkey>
+      </stratum>
+      <temporal>
+        <tempkt>None</tempkt>
+        <tempkey>Miocene</tempkey>
+      </temporal>
+    </keywords>
+    <accconst>None</accconst>
+    <useconst>None</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Ian P. Yuh</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntpos>Geologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>2130 SW Fifth Avenue</address>
+          <city>Portland</city>
+          <state>OR</state>
+          <postal>97201</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>503-251-3222</cntvoice>
+        <cntemail>iyuh@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>No formal accuracy assessment has been performed.</attraccr>
+    </attracc>
+    <logic>No formal assessment of logical consistency has been performed. Some samples have multiple analyses.</logic>
+    <complete>Data set is considered complete for the information presented, as described in the abstract. Users are advised to read the rest of the metadata record carefully for additional details.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>Estimated accuracy of horizontal location is given on a per-feature basis by attribute LocationConfidenceMeters. Values are expected to be correct within a factor of 2. A LocationConfidenceMeters value of -9 indicates that no value has been assigned.</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>No formal positional accuracy tests were conducted.</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Diane M. Johnson</origin>
+            <origin>Peter R. Hooper</origin>
+            <origin>Richard M. Conrey</origin>
+            <pubdate>1999</pubdate>
+            <title>XRF Analysis of Rocks and Minerals for Major and Trace Elements on a Single Low Dilution Li-tetraborate Fused Bead</title>
+            <geoform>publication</geoform>
+            <onlink>https://s3.wp.wsu.edu/uploads/sites/2191/2017/06/Johnson-Hooper-and-Conrey.pdf</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>1999</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Johnson et al., 1999</srccitea>
+        <srccontr>Described methods used for X-ray fluorescence in the process step.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Russell C. Evarts</origin>
+            <origin>James E. O'Connor</origin>
+            <origin>Terry L. Tolan</origin>
+            <pubdate>2013</pubdate>
+            <title>Geologic map of the Washougal quadrangle, Clark County, Washington, and Multnomah County</title>
+            <geoform>publication</geoform>
+            <pubinfo>
+              <pubplace>Reston, Virginia</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.3133/sim3257</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>2013</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Evarts et al., 2013</srccitea>
+        <srccontr>Provided geochemical data for the study area.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Russell C. Evarts</origin>
+            <origin>Robert J. Fleck</origin>
+            <pubdate>2017</pubdate>
+            <title>Geologic map of the Beacon Rock quadrangle, Skamania County, Washington</title>
+            <geoform>publication</geoform>
+            <pubinfo>
+              <pubplace>Reston, Virginia</pubplace>
+              <publish>U.S. Geological Survey</publish>
+            </pubinfo>
+            <onlink>https://doi.org/10.3133/sim3367</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>2017</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Evarts and Fleck, 2017</srccitea>
+        <srccontr>Provided geochemical data for the study area.</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>Samples were collected in the field between 2002 and 2014. Major- and trace-element chemical analyses were performed by X-ray fluorescence by D.M. Johnson Cornelius and R.M. Conrey at Peter Hooper GeoAnalytical Laboratory of Washington State University, Pullman, Washington using methods described in Johnson et al. (1999).</procdesc>
+        <srcused>Johnson et al., 1999</srcused>
+        <procdate>2015</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>R.C. Evarts compiled tables of sample locations and assigned map unit names to samples based on their chemical composition, field observations, and other properties. The location and map unit assignments were joined to the tables of unnormalized geochemical data from the Peter Hooper GeoAnalytical Laboratory to include data from Evarts et al. (2013) and Evarts and Fleck (2017).</procdesc>
+        <srcused>Evarts et al., 2013</srcused>
+        <srcused>Evarts and Fleck, 2017</srcused>
+        <procdate>2015</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <spdoinfo>
+    <direct>Vector</direct>
+  </spdoinfo>
+  <spref>
+    <horizsys>
+      <geograph>
+        <latres>1.0E-6</latres>
+        <longres>1.0E-6</longres>
+        <geogunit>Decimal degrees</geogunit>
+      </geograph>
+      <geodetic>
+        <horizdn>World Geodetic System 1984</horizdn>
+        <ellips>WGS_1984</ellips>
+        <semiaxis>6378137.0</semiaxis>
+        <denflat>298.257223563</denflat>
+      </geodetic>
+    </horizsys>
+  </spref>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>XRF_WesternColumbiaRiverGorgeCRBG</enttypl>
+        <enttypd>Comma-separated value file containing geochemical data from XRF analyses and location of whole-rock samples from this study.</enttypd>
+        <enttypds>This study</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>MapUnit</attrlabl>
+        <attrdef>Short plain-text identifier of the map unit.</attrdef>
+        <attrdefs>Modified from GeMS (Geologic Map Schema)</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>Tsp</edomv>
+            <edomvd>Pomona Member of Saddle Mountains Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Swanson, D.A., Wright, T.L., Hooper, P.R., and Bentley, R.D., 1979, Revisions in stratigraphic nomenclature of the Columbia River Basalt Group: Bulletin 1457-G, http://pubs.er.usgs.gov/publication/b1457G.</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Twpr</edomv>
+            <edomvd>basalt of Rosalia (informal) in Priest Rapids Member of Wanapum Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Swanson, D.A., Wright, T.L., Hooper, P.R., and Bentley, R.D., 1979, Revisions in stratigraphic nomenclature of the Columbia River Basalt Group: Bulletin 1457-G, http://pubs.er.usgs.gov/publication/b1457G.</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Twfss</edomv>
+            <edomvd>basalt of Sentinel Gap (informal) in Frenchman Springs Member of Wanapum Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Evarts, R.C., and Fleck, R.J., 2017, Geologic map of the Beacon Rock quadrangle, Skamania County, Washington: U.S. Geological Survey Scientific Investigations Map 3367, pamphlet 61 p., scale 1:24,000, https://doi.org/10.3133/sim3367.</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Twfsh</edomv>
+            <edomvd>basalt of Sand Hollow (informal) in Frenchman Springs Member of Wanapum Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Evarts, R.C., and Fleck, R.J., 2017, Geologic map of the Beacon Rock quadrangle, Skamania County, Washington: U.S. Geological Survey Scientific Investigations Map 3367, pamphlet 61 p., scale 1:24,000, https://doi.org/10.3133/sim3367.</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Twfsg</edomv>
+            <edomvd>basalt of Ginkgo (informal) in Frenchman Springs Member of Wanapum Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Russell C. Evarts unpublished data</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgsb</edomv>
+            <edomvd>Sentinel Bluffs Member of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Reidel, S.P., and Tolan, T.L., 2013, The Grande Ronde Basalt, Columbia River Basalt Group, in Reidel, S.P., Camp, V.E., Ross, M.E., Wolff, J.A., Martin, B.S., Tolan, T.L., and Wells, R.E., eds., The Columbia River Flood Basalt Province: Geological Society of America, p. 117-153. https://doi.org/10.1130/2013.2497(05).</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgsbm</edomv>
+            <edomvd>basalt of Museum (informal) in Sentinel Bluffs Member of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Reidel, S.P., 2005, A Lava Flow without a Source: The Cohassett Flow and Its Compositional Components, Sentinel Bluffs Member, Columbia River Basalt Group: The Journal of Geology, v. 113, no. 1, p. 1-21, https://doi.org/10.1086/425966.</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgsbsf</edomv>
+            <edomvd>basalt of Spokane Falls (informal) in Sentinel Bluffs Member of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Reidel, S.P., 2005, A Lava Flow without a Source: The Cohassett Flow and Its Compositional Components, Sentinel Bluffs Member, Columbia River Basalt Group: The Journal of Geology, v. 113, no. 1, p. 1-21, https://doi.org/10.1086/425966.</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgsbmc</edomv>
+            <edomvd>basalt of McCoy Canyon (informal) in Sentinel Bluffs Member of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Reidel, S.P., 2005, A Lava Flow without a Source: The Cohassett Flow and Its Compositional Components, Sentinel Bluffs Member, Columbia River Basalt Group: The Journal of Geology, v. 113, no. 1, p. 1-21, https://doi.org/10.1086/425966.</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgww</edomv>
+            <edomvd>Winter Water Member of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Evarts, R.C., and Fleck, R.J., 2017, Geologic map of the Beacon Rock quadrangle, Skamania County, Washington: U.S. Geological Survey Scientific Investigations Map 3367, pamphlet 61 p., scale 1:24,000, https://doi.org/10.3133/sim3367.</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgo</edomv>
+            <edomvd>Ortley member (informal) of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Reidel, S.P., and Tolan, T.L., 2013, The Grande Ronde Basalt, Columbia River Basalt Group, in Reidel, S.P., Camp, V.E., Ross, M.E., Wolff, J.A., Martin, B.S., Tolan, T.L., and Wells, R.E., eds., The Columbia River Flood Basalt Province: Geological Society of America, p. 117-153. https://doi.org/10.1130/2013.2497(05).</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgo-h</edomv>
+            <edomvd>hyaloclastic breccia in informal Ortley member of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Russell C. Evarts unpublished data</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tggc</edomv>
+            <edomvd>Grouse Creek member (informal) of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Reidel, S.P., and Tolan, T.L., 2013, The Grande Ronde Basalt, Columbia River Basalt Group, in Reidel, S.P., Camp, V.E., Ross, M.E., Wolff, J.A., Martin, B.S., Tolan, T.L., and Wells, R.E., eds., The Columbia River Flood Basalt Province: Geological Society of America, p. 117-153. https://doi.org/10.1130/2013.2497(05).</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tggc-h</edomv>
+            <edomvd>hyaloclastic breccia in informal Grouse Creek member of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Russell C. Evarts unpublished data</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgwr</edomv>
+            <edomvd>Wapshilla Ridge member (informal) of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Reidel, S.P., and Tolan, T.L., 2013, The Grande Ronde Basalt, Columbia River Basalt Group, in Reidel, S.P., Camp, V.E., Ross, M.E., Wolff, J.A., Martin, B.S., Tolan, T.L., and Wells, R.E., eds., The Columbia River Flood Basalt Province: Geological Society of America, p. 117-153. https://doi.org/10.1130/2013.2497(05).</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgmh</edomv>
+            <edomvd>Mount Horrible member (informal) of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Reidel, S.P., and Tolan, T.L., 2013, The Grande Ronde Basalt, Columbia River Basalt Group, in Reidel, S.P., Camp, V.E., Ross, M.E., Wolff, J.A., Martin, B.S., Tolan, T.L., and Wells, R.E., eds., The Columbia River Flood Basalt Province: Geological Society of America, p. 117-153. https://doi.org/10.1130/2013.2497(05).</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgch</edomv>
+            <edomvd>China Creek member (informal) of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Reidel, S.P., and Tolan, T.L., 2013, The Grande Ronde Basalt, Columbia River Basalt Group, in Reidel, S.P., Camp, V.E., Ross, M.E., Wolff, J.A., Martin, B.S., Tolan, T.L., and Wells, R.E., eds., The Columbia River Flood Basalt Province: Geological Society of America, p. 117-153. https://doi.org/10.1130/2013.2497(05).</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgdg</edomv>
+            <edomvd>Downey Gulch Member of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Reidel, S.P., and Tolan, T.L., 2013, The Grande Ronde Basalt, Columbia River Basalt Group, in Reidel, S.P., Camp, V.E., Ross, M.E., Wolff, J.A., Martin, B.S., Tolan, T.L., and Wells, R.E., eds., The Columbia River Flood Basalt Province: Geological Society of America, p. 117-153. https://doi.org/10.1130/2013.2497(05).</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgtb</edomv>
+            <edomvd>Teepee Butte Member of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Reidel, S.P., and Tolan, T.L., 2013, The Grande Ronde Basalt, Columbia River Basalt Group, in Reidel, S.P., Camp, V.E., Ross, M.E., Wolff, J.A., Martin, B.S., Tolan, T.L., and Wells, R.E., eds., The Columbia River Flood Basalt Province: Geological Society of America, p. 117-153. https://doi.org/10.1130/2013.2497(05).</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgtbp</edomv>
+            <edomvd>basalt of Punchbowl Falls (informal) in Teepee Butte Member of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Russell C. Evarts unpublished data</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgtbw</edomv>
+            <edomvd>basalt of Wahclella Falls (informal) in Teepee Butte Member of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Russell C. Evarts unpublished data</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>Tgtbr</edomv>
+            <edomvd>basalt of Ruckel Creek (informal) in Teepee Butte Member of Grande Ronde Basalt of Columbia River Basalt Group</edomvd>
+            <edomvds>Russell C. Evarts unpublished data</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FieldSampleID</attrlabl>
+        <attrdef>Sample number given at time of collection. Samples collected by R.C. Evarts have the following format: YY(quadrangle code)(serial locality number), where YY is the last two digits of the four-digit calendar year, and quadrangle code is as follows: BV-G = Bridal Veil 15-minute quadrangle, BD-R = Bonneville Dam 15-minute quadrangle, CM-T = Camas 15-minute quadrangle. Samples collected by R.M. Conrey have the following format: RCYY-(serial locality number); samples collected by M.H. Beeson have the following format: CG-(serial locality number).</attrdef>
+        <attrdefs>Modified from GeMS (Geologic Map Schema)</attrdefs>
+        <attrdomv>
+          <udom>Free text identifier to track sample.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AlternateSampleID</attrlabl>
+        <attrdef>Lab number; 'R' at end indicates re-analysis; "null" where analysis is original</attrdef>
+        <attrdefs>Modified from GeMS (Geologic Map Schema)</attrdefs>
+        <attrdomv>
+          <udom>Free text identifier to track sample.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>SiO2</attrlabl>
+        <attrdef>Concentration of silicon, expressed as weight percent SiO2</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>48.21</rdommin>
+            <rdommax>56.84</rdommax>
+            <attrunit>weight percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>TiO2</attrlabl>
+        <attrdef>Concentration of titanium, expressed as weight percent TiO2</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>1.006</rdommin>
+            <rdommax>3.691</rdommax>
+            <attrunit>weight percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Al2O3</attrlabl>
+        <attrdef>Concentration of aluminum, expressed as weight percent Al2O3</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>12.45</rdommin>
+            <rdommax>17.63</rdommax>
+            <attrunit>weight percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>FeOt</attrlabl>
+        <attrdef>Concentration of iron (total), expressed as weight percent FeO</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>6.26</rdommin>
+            <rdommax>15.74</rdommax>
+            <attrunit>weight percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MgO</attrlabl>
+        <attrdef>Concentration of magnesium, expressed as weight percent MgO</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>3.028</rdommin>
+            <rdommax>6.976</rdommax>
+            <attrunit>weight percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>CaO</attrlabl>
+        <attrdef>Concentration of calcium, expressed as weight percent CaO</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>6.225</rdommin>
+            <rdommax>10.604</rdommax>
+            <attrunit>weight percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Na2O</attrlabl>
+        <attrdef>Concentration of sodium, expressed as weight percent Na2O</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>2.283</rdommin>
+            <rdommax>3.966</rdommax>
+            <attrunit>weight percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>K2O</attrlabl>
+        <attrdef>Concentration of potassium, expressed as weight percent K2O</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.331</rdommin>
+            <rdommax>2.164</rdommax>
+            <attrunit>weight percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>P2O5</attrlabl>
+        <attrdef>Concentration of phosphorus, expressed as weight percent P2O5</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.221</rdommin>
+            <rdommax>0.813</rdommax>
+            <attrunit>weight percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MnO</attrlabl>
+        <attrdef>Concentration of manganese, expressed as weight percent MnO</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.108</rdommin>
+            <rdommax>1.081</rdommax>
+            <attrunit>weight percent</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>La</attrlabl>
+        <attrdef>Concentration of lanthanum, in parts per million; blanks indicate not determined</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>14.8</rdommin>
+            <rdommax>36.9</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ce</attrlabl>
+        <attrdef>Concentration of cerium, in parts per million; blanks indicate not determined</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>30.9</rdommin>
+            <rdommax>71.5</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Nd</attrlabl>
+        <attrdef>Concentration of neodymium, in parts per million; blanks indicate not determined</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>19.7</rdommin>
+            <rdommax>42.2</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sc</attrlabl>
+        <attrdef>Concentration of scandium, in parts per million</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>16.2</rdommin>
+            <rdommax>42.7</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>V</attrlabl>
+        <attrdef>Concentration of vanadium, in parts per million</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>132.7</rdommin>
+            <rdommax>434.0</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cr</attrlabl>
+        <attrdef>Concentration of chromium, in parts per million</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.7</rdommin>
+            <rdommax>111.0</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ni</attrlabl>
+        <attrdef>Concentration of nickel, in parts per million</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.0</rdommin>
+            <rdommax>58.0</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cu</attrlabl>
+        <attrdef>Concentration of copper, in parts per million</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>5.9</rdommin>
+            <rdommax>109.2</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Zn</attrlabl>
+        <attrdef>Concentration of zinc, in parts per million</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>87.4</rdommin>
+            <rdommax>192.4</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ga</attrlabl>
+        <attrdef>Concentration of gallium, in parts per million; blanks indicate not determined</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>16.9</rdommin>
+            <rdommax>24.0</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Zr</attrlabl>
+        <attrdef>Concentration of zirconium, in parts per million</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>133.0</rdommin>
+            <rdommax>234.2</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Ba</attrlabl>
+        <attrdef>Concentration of barium, in parts per million</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>229.0</rdommin>
+            <rdommax>1116.0</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Cs</attrlabl>
+        <attrdef>Concentration of cesium, in parts per million; blanks indicate not determined</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.2</rdommin>
+            <rdommax>5.0</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Nb</attrlabl>
+        <attrdef>Concentration of niobium, in parts per million</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>8.6</rdommin>
+            <rdommax>19.9</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Pb</attrlabl>
+        <attrdef>Concentration of lead, in parts per million; blanks indicate not determined</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>2.1</rdommin>
+            <rdommax>11.6</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Rb</attrlabl>
+        <attrdef>Concentration of rubidium, in parts per million</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>4.5</rdommin>
+            <rdommax>61.8</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Sr</attrlabl>
+        <attrdef>Concentration of strontium, in parts per million</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>227.3</rdommin>
+            <rdommax>551.2</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Th</attrlabl>
+        <attrdef>Concentration of thorium, in parts per million; blanks indicate not determined</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0.8</rdommin>
+            <rdommax>7.6</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>U</attrlabl>
+        <attrdef>Concentration of uranium, in parts per million; negative values indicate determinations less than the detection limit of the analytical method; blanks indicate not determined</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-0.4</rdommin>
+            <rdommax>4.5</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Y</attrlabl>
+        <attrdef>Concentration of yttrium, in parts per million</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>20.8</rdommin>
+            <rdommax>57.5</rdommax>
+            <attrunit>parts per million</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LocationConfidenceMeters</attrlabl>
+        <attrdef>Estimated half-width in meters of positional uncertainty envelope; position is relative to other features in database.</attrdef>
+        <attrdefs>GeMS (Geologic Map Schema)</attrdefs>
+        <attrdomv>
+          <udom>Positive real number. Value of -9 indicates value is unknown.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>LocationSourceID</attrlabl>
+        <attrdef>Source of location; foreign key to table DataSources.</attrdef>
+        <attrdefs>GeMS (Geologic Map Schema)</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>EvartsFleck2017</edomv>
+            <edomvd>Evarts, R.C., and Fleck, R.J., 2017, Geologic map of the Beacon Rock quadrangle, Skamania County, Washington: U.S. Geological Survey Scientific Investigations Map 3367, pamphlet 61 p., scale 1:24,000, https://doi.org/10.3133/sim3367.</edomvd>
+            <edomvds>This study</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>EvartsOConnorTolan2013</edomv>
+            <edomvd>Evarts, R.C., O'Connor, J.E., and Tolan, T.L., 2013, Geologic map of the Washougal quadrangle, Clark County, Washington, and Multnomah County, U.S. Geological Survey Scientific Investigations Map 3257, scale 1:24,000, https://doi.org/10.3133/sim3257.</edomvd>
+            <edomvds>This study</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>EvartsUnpubBonnevilleDam</edomv>
+            <edomvd>Russell C. Evarts, unpublished geologic map and database of Bonneville Dam 7.5-minute quadrangle.</edomvd>
+            <edomvds>This study</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>EvartsUnpubBridalVeil</edomv>
+            <edomvd>Russell C. Evarts, unpublished geologic map and database of Bridal Veil 7.5-minute quadrangle.</edomvd>
+            <edomvds>This study</edomvds>
+          </edom>
+        </attrdomv>
+        <attrdomv>
+          <edom>
+            <edomv>EvartsUnpubMultnomahFalls</edomv>
+            <edomvd>Russell C. Evarts, unpublished geologic map and database of Multnomah Falls 7.5-minute quadrangle.</edomvd>
+            <edomvds>This study</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>AnalysisSourceID</attrlabl>
+        <attrdef>Source of analysis; foreign key to table DataSources.</attrdef>
+        <attrdefs>GeMS (Geologic Map Schema)</attrdefs>
+        <attrdomv>
+          <edom>
+            <edomv>WSU</edomv>
+            <edomvd>Peter Hooper GeoAnalytical Laboratory at Washington State University</edomvd>
+            <edomvds>This study</edomvds>
+          </edom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>MaterialAnalyzed</attrlabl>
+        <attrdef>Earth material which was analyzed, typically whole-rock.</attrdef>
+        <attrdefs>GeMS (Geologic Map Schema)</attrdefs>
+        <attrdomv>
+          <udom>Free text.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>DateAnalysis</attrlabl>
+        <attrdef>Date and time of analysis provided by lab, formatted as MM/DD/YYYY HH:MM; blanks indicate no data.</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <udom>Point in time.</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Latitude</attrlabl>
+        <attrdef>Latitude, in decimal degrees; World Geodetic System 1984 datum.</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>45.500206</rdommin>
+            <rdommax>45.723826</rdommax>
+            <attrunit>degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>Longitude</attrlabl>
+        <attrdef>Longitude, in decimal degrees; World Geodetic System 1984 datum.</attrdef>
+        <attrdefs>This study</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>-122.295136</rdommin>
+            <rdommax>-121.875144</rdommax>
+            <attrunit>degrees</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntperp>
+          <cntper>GS ScienceBase</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747:</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall the act of distribution constitute any such warranty. Any use of trade, firm, or product names is for descriptive purposes only and does not imply endorsement by the U.S. Government.</distliab>
+  </distinfo>
+  <metainfo>
+    <metd>20220906</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>Ian P. Yuh</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>2130 SW 5th Avenue</address>
+          <city>Portland</city>
+          <state>OR</state>
+          <postal>97201</postal>
+          <country>US</country>
+        </cntaddr>
+        <cntvoice>503-251-3222</cntvoice>
+        <cntemail>iyuh@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+    <mettc>local time</mettc>
+  </metainfo>
+</metadata>

@@ -1,0 +1,212 @@
+---
+title: "Lavaflow Classification"
+author: "Ephraim Romesberg"
+date: "2023-03-22"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(glmnet)
+library(caret)
+library(forcats)
+library(MASS)
+LavaFlow <- read.csv("Data/XRF_WesternColumbiaRiverGorgeCRBG.csv")
+```
+
+
+## Processing the data
+
+
+```{r}
+#checking how many NA's in each column
+noNA=sapply(colnames(LavaFlow),function(x){sum(is.na(LavaFlow[x]))})
+Lavaflow1=LavaFlow[,noNA==0]
+#removing repeated samples
+Lavaflow1=Lavaflow1[Lavaflow1$AlternateSampleID=="null",]
+#names of predictors used
+predictors1=colnames(Lavaflow1)[4:25]
+#data matrix of predictors
+Lavaflow1.X=Lavaflow1[,predictors1]
+#combining Tggc with Tggc-h and Tgo with Tgo-h
+Lavaflow2=Lavaflow1
+Lavaflow2$MapUnit=fct_collapse(Lavaflow2$MapUnit,Tggc2=c("Tggc","Tggc-h"),Tgo2=c("Tgo","Tgo-h"))
+table(Lavaflow2$MapUnit)
+#deleting groups which have less than 5 observations
+lev=levels(Lavaflow2$MapUnit)[table(Lavaflow2$MapUnit)<5]
+Lavaflow2=Lavaflow2[!(Lavaflow2$MapUnit%in%lev),]
+Lavaflow2$MapUnit=factor(Lavaflow2$MapUnit)
+#Now we have 16 total groups
+table(Lavaflow2$MapUnit)
+#data matrix of predictors
+Lavaflow2.X=Lavaflow2[,predictors1]
+#standardizing
+Lavaflow2.X.Z=data.frame(scale(Lavaflow2.X))
+```
+
+
+
+```{r}
+# We were told that the following ratios may be useful for classification: Ti/Zr, Sc/Cr, Ti/V, Ba/Nb, Ce/Nb, Zr/Nb, Ba/Sr, Rb/Sr, Zr/Y, Cr/P2O5, FeO*/MgO
+
+#Making sure we don't divide by zero:
+apply(Lavaflow2.X==0,MARGIN = 2,sum)
+
+#Looks like only Ni has any zero values
+
+Lavaflow2.X2=Lavaflow2.X
+Lavaflow2.X2$Ti_Zr=Lavaflow2.X2$TiO2/Lavaflow2.X2$Zr
+Lavaflow2.X2$Sc_Cr=Lavaflow2.X2$Sc/Lavaflow2.X2$Cr
+Lavaflow2.X2$Ti_V=Lavaflow2.X2$TiO2/Lavaflow2.X2$V
+Lavaflow2.X2$Ba_Nb=Lavaflow2.X2$Ba/Lavaflow2.X2$Nb
+Lavaflow2.X2$Zr_Nb=Lavaflow2.X2$Zr/Lavaflow2.X2$Nb
+Lavaflow2.X2$Ba_Sr=Lavaflow2.X2$Ba/Lavaflow2.X2$Sr
+Lavaflow2.X2$Rb_Sr=Lavaflow2.X2$Rb/Lavaflow2.X2$Sr
+Lavaflow2.X2$Zr_Y=Lavaflow2.X2$Zr/Lavaflow2.X2$Y
+Lavaflow2.X2$Cr_P2O5=Lavaflow2.X2$Cr/Lavaflow2.X2$P2O5
+Lavaflow2.X2$FeOt_MgO=Lavaflow2.X2$FeOt/Lavaflow2.X2$MgO
+```
+
+
+
+```{r}
+#Here we will store the predicted MapUnits (using LDA and MLR) for each observation 
+Lavaflow2.Predictions=Lavaflow2[,c("MapUnit","FieldSampleID")]
+```
+
+
+## Linear Discriminant Analysis
+
+
+### Predicting the MapUnits using LDA model fit on the entire dataset
+
+
+```{r}
+lda2=lda(x=Lavaflow2.X.Z,grouping=Lavaflow2$MapUnit,prior=rep(1/16,16))
+Lavaflow2.Predictions$LDA_Predicted_MapUnit=predict(lda2,newdata = Lavaflow2.X.Z)$class
+```
+
+
+### Predicting MapUnits using 4fold cross validated LDA model
+
+
+Here 4 fold cross validation is used, this involves randomly splitting the data into 4 subsets (folds) where each fold is approximately 1/4 of the data. For each fold a model fit on the other 3 folds is used to make predictions. This leads to a MapUnit prediction for each observation based on data that does not include that observation. This means that the model will be less biased towards predicting the MapUnits assigned to the observations (which could be an advantage if some of the observations are believed to be missclassified). The folds are stratified so each fold has approximately 1/4 of the observations from each MapUnit, this is so the train and test sets will always contain observations from all MapUnits.
+
+
+
+```{r}
+set.seed(123)
+fold.4=createFolds(y=Lavaflow2$MapUnit,k=4)
+```
+
+
+```{r}
+Lavaflow2.Predictions$LDA_Predicted_MapUnit_4fold=factor(rep(NA,nrow(Lavaflow2.Predictions)),levels = levels(Lavaflow2$MapUnit))
+for (i in 1:4){
+  train=Lavaflow2.X[-fold.4[[i]],]
+  test=Lavaflow2.X[fold.4[[i]],]
+  ppv=preProcess(train,method = c("center", "scale"))
+  train.z=predict(ppv,train) 
+  test.z=predict(ppv,test)
+  lda.s=lda(x=train.z,grouping=Lavaflow2$MapUnit[-fold.4[[i]]])
+  Lavaflow2.Predictions$LDA_Predicted_MapUnit_4fold[fold.4[[i]]]=predict(lda.s,newdata=test.z)$class
+}
+```
+
+
+## Lasso MLR (w/Ratios)
+
+
+### Predicting the MapUnits using Lasso MLR model (including Ratios) fit on the entire dataset 
+
+
+Just an FYI with this data the glmnet functions will give the warning message "one multinomial or binomial class has fewer than 8  observations; dangerous ground" this is because the data is highly imbalanced and some MapUnits have fewer than 8 observations. The models still fit and run fun fine though and this message can be disregarded.
+
+
+```{r,cache=TRUE,warning=FALSE}
+set.seed(17)
+mlr.las2.cv = cv.glmnet(data.matrix(Lavaflow2.X2), Lavaflow2$MapUnit, family = "multinomial", type.multinomial = "ungrouped")
+Lavaflow2.Predictions$MLR_Predicted_MapUnit=factor(predict(mlr.las2.cv, newx = data.matrix(Lavaflow2.X2), s = "lambda.min", type = "class"),levels = levels(Lavaflow2$MapUnit))
+```
+
+
+### Predicting MapUnits using 4fold cross validated Lasso MLR model (including Ratios)
+
+
+Here same as for LDA 4 fold cross validation is used. Just like for LDA this means the model will be less biased towards predicting the MapUnits assigned to the observations.
+
+
+```{r,cache=TRUE,warning=FALSE}
+Lavaflow2.Predictions$MLR_Predicted_MapUnit_4fold=factor(rep(NA,nrow(Lavaflow2.Predictions)),levels = levels(Lavaflow2$MapUnit))
+set.seed(23)
+for (i in 1:4){
+  train=data.matrix(Lavaflow2.X2[-fold.4[[i]],])
+  test=data.matrix(Lavaflow2.X2[fold.4[[i]],])
+  mlr.s.cv=cv.glmnet(train,Lavaflow2$MapUnit[-fold.4[[i]]],family="multinomial",type.multinomial="ungrouped")
+  Lavaflow2.Predictions$MLR_Predicted_MapUnit_4fold[fold.4[[i]]]=factor(predict(mlr.s.cv, newx = test, s = "lambda.min", type = "class"),levels = levels(Lavaflow2$MapUnit))
+}
+```
+
+
+Here are the predictions (using LDA, lasso MLR, 4fold cross validated LDA and 4fold cross validated lasso MLR) for each observation in the dataset:
+
+
+```{r}
+View(Lavaflow2.Predictions)
+```
+
+
+Here are the predictions for just the observations in Tgsb:
+
+
+```{r}
+View(Lavaflow2.Predictions[Lavaflow2.Predictions$MapUnit=="Tgsb",])
+```
+
+
+## Predicting MapUnits of new observations using LDA and lasso MLR
+
+
+Here is a function that takes a data.frame of n new observations as an input and gives the predicted MapUnit using LDA and MLR for each observation as an output. The input must be a data.frame with the n observations as rows and variables as columns. The data.frame must contain the 22 variables used for fitting the LDA and MLR models (it can contain other variables as well but those wont be used in the models). Here are these variables:
+
+
+```{r}
+colnames(Lavaflow2.X)
+```
+
+
+The data must be in its raw form like in the original dataset (`Lavaflow2.X`) (the function automatically standardizes the new data using the mean/sd values from `Lavaflow2.X`). The function also automatically computes the ratios which are used in the MLR model.
+
+
+```{r}
+Predict.Mapunit=function(newdata){
+ newdata=data.frame(newdata)
+ newdata=newdata[,colnames(Lavaflow2.X)]
+ #Adding the Ratios (these are only used in the Lasso MLR model)
+ newdata.ratios=newdata
+ newdata.ratios$Ti_Zr=newdata.ratios$TiO2/newdata.ratios$Zr
+ newdata.ratios$Sc_Cr=newdata.ratios$Sc/newdata.ratios$Cr
+ newdata.ratios$Ti_V=newdata.ratios$TiO2/newdata.ratios$V
+ newdata.ratios$Ba_Nb=newdata.ratios$Ba/newdata.ratios$Nb
+ newdata.ratios$Zr_Nb=newdata.ratios$Zr/newdata.ratios$Nb
+ newdata.ratios$Ba_Sr=newdata.ratios$Ba/newdata.ratios$Sr
+ newdata.ratios$Rb_Sr=newdata.ratios$Rb/newdata.ratios$Sr
+ newdata.ratios$Zr_Y=newdata.ratios$Zr/newdata.ratios$Y
+ newdata.ratios$Cr_P2O5=newdata.ratios$Cr/newdata.ratios$P2O5
+ newdata.ratios$FeOt_MgO=newdata.ratios$FeOt/newdata.ratios$MgO
+ newdata.Z=predict(preProcess(Lavaflow2.X,method = c("center", "scale")),newdata)
+ LDA_Predicted_MapUnit=factor(predict(lda2,newdata.Z)$class,levels=levels(Lavaflow2$MapUnit))
+ MLR_Predicted_MapUnit=factor(predict(mlr.las2.cv, newx = data.matrix(newdata.ratios), s = "lambda.min", type = "class"),levels = levels(Lavaflow2$MapUnit))
+ #A data.frame containing the predicted MapUnits (for each observation in newdata) using LDA (1st column) and MLR (2nd column) is returned
+ return(data.frame(LDA_Predicted_MapUnit,MLR_Predicted_MapUnit))
+ }
+```
+
+
+Here is an example of how to use this function (here we just use the first 10 rows of `Lavaflow2.X` as our "newdata"):
+
+
+```{r}
+example_predictions=Predict.Mapunit(Lavaflow2.X[1:10,])
+example_predictions
+```
